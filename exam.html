@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="exam.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>page</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" class="home">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="record.html">Records</a></li>
+        <li><a href="sample.html">About</a></li>
+        <li><a href="#" class="name">Name</a></li>
+      </ul>
+    </nav>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="sub-item"><img src="image.png" /></div>
+        <div class="sub-item">
+          <p id="post1">
+            Post 2 heading<br />Lorem Ipsum es simplemente el texto de relleno
+            de las imprentas y archivos de texto.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="left-side">
+          <h1>
+            My News<br />
+            Website
+          </h1>
+        </div>
+        <div class="right-side">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>Travel</li>
+            <li>Recommendations</li>
+            <li>Mission Statement</li>
+          </ul>
+          <ul>
+            <li>About Us</li>
+            <li>Promo Fli</li>
+            <li>Guides</li>
+            <li>The Team</li>
+          </ul>
+          <p>2021-2022My News Website All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Fetch data from API
+      fetch(
+        "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f7d54802ae9d4e2eb6b90d6e456b63ee"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          // Update sub-item containers with API data
+          document.getElementById("post1").innerText = data[1].title;
+          // Update more sub-items with respective API data
+        })
+        .catch((error) => {
+          console.log("Error fetching API data:", error);
+        });
+    </script>
+  </body>
+</html>
